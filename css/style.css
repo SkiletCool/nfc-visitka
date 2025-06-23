@@ -1,0 +1,194 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0f0f0f;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 40px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    border: 3px solid #2c2c2c;
+  }
+
+  h1 {
+    margin-top: 20px;
+    font-size: 26px;
+    text-align: center;
+  }
+
+  p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #bbbbbb;
+    text-align: center;
+    max-width: 90%;
+    margin-bottom: 30px;
+  }
+
+  .button {
+    display: block;
+    width: 90%;
+    max-width: 300px;
+    margin: 12px auto;
+    padding: 15px 20px;
+    background-color: #1a1a1a;
+    border: 2px solid #2f2f2f;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #3fff7f;
+    color: #000000;
+    border-color: #3fff7f;
+    box-shadow: 0 0 15px #3fff7f88;
+    transform: scale(1.03);
+  }
+
+  footer {
+    margin-top: auto;
+    padding: 20px;
+    font-size: 12px;
+    color: #444;
+    text-align: center;
+  }
+
+  /* Анимация падающего черепа */
+  .skull {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    font-size: 40px;
+    transform: translateX(-50%);
+    animation: fall 3s infinite linear;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  @keyframes fall {
+    0% {
+      top: -100px;
+      opacity: 0;
+      transform: translateX(-50%) rotate(0deg);
+    }
+    10% {
+      opacity: 1;
+    }
+    100% {
+      top: 110%;
+      opacity: 0;
+      transform: translateX(-50%) rotate(360deg);
+    }
+  }
+
+/* Модальное окно для дискорда */
+
+  .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(3px);
+      justify-content: center;
+      align-items: center;
+  }
+
+  .modal-content {
+      background-color: #1a1a1a;
+      border: 2px solid #2f2f2f;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      color: #fff;
+      max-width: 90%;
+      width: 300px;
+      box-shadow: 0 0 15px rgba(0, 255, 120, 0.2);
+  }
+
+  .modal-content h3 {
+      margin-top: 0;
+      color: #3fff7f;
+  }
+
+  .modal-content button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #3fff7f;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s ease;
+  }
+
+  .modal-content button:hover {
+      background-color: #2ddb63;
+  }
+
+/* Описание для музыки */
+
+  .spotify-message {
+      max-width: 400px;
+      margin: 10px auto 30px;
+      color: #7affb9;
+      font-style: italic;
+      text-align: center;
+      font-size: 14px;
+      user-select: none;
+  }
+
+  .spotify-message a {
+      color: #7affb9;
+      text-decoration: underline;
+  }
+
+/* Стили для телефона */
+
+#playButton {
+  display: none;
+  /* Скрываем по умолчанию */
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #222;
+  color: #7affb9;
+  border: 2px solid #7affb9;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  display: block;
+  text-align: center;
+  max-width: 200px;
+}
+
+#playButton:hover {
+  background-color: #7affb9;
+  color: #222;
+}
+
+/* Показываем кнопку только на мобильных */
+@media (max-width: 768px) {
+  #playButton {
+    display: block;
+  }
+}

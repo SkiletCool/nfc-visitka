@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💀 NFC-визитка Skilet Cool</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Анимация черепа -->
+    <div class="skull">💀</div>
+
+    <!-- Основной контент -->
+    <img src="me_while_glasses.png" alt="Моё фото" />
+    <audio id="bgMusic" src="music/Cyberpunk.mp3" preload="auto"></audio>
+    <button id="playButton" class="button">▶ Включить музыку</button>
+    <h1>Привет! Я Павел</h1>
+    <p>
+      Если ты читаешь это — значит моя NFC-визитка сработала 😎<br />
+      Учусь на программиста, иногда творю в Blender 3D<br />
+      и не прочь сыграть во что-нибудь на ПК.<br />
+      Добрый, отзывчивый и могу помочь,<br />
+      особенно если за это дадут печеньку 🍪
+    </p>
+
+    <a
+      href="https://www.instagram.com/269skiletcool?igsh=bG04aDA5N21yc29p"
+      class="button"
+      >Instagram</a
+    >
+    <a href="https://t.me/SkiletCool" class="button">Telegram</a>
+    <a href="#" class="button" onclick="openModal()">Написать в Discord 💬</a>
+
+    <!-- Модальное окно -->
+    <div id="discordModal" class="modal">
+      <div class="modal-content">
+        <h3>Добавь меня в Discord</h3>
+        <p><strong>skiletcool</strong></p>
+        <p>Затем напиши в ЛС — открыт для сообщений!</p>
+        <button onclick="closeModal()">Закрыть</button>
+      </div>
+    </div>
+
+    <a
+      href="https://open.spotify.com/user/gpptndqcvj5oyvyjth8wcfwr8"
+      class="button"
+      >Spotify</a
+    >
+
+    <p class="spotify-message">
+      Останься на пару минут и насладись музыкой,<br />
+      но а если спешишь — береги себя и находи эту песню —<br />
+      <strong>
+        <a
+          href="https://open.spotify.com/track/3WKQSwgb18Vw6HIQtewWmy"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          I Really Want to Stay at Your House
+        </a>
+      </strong>
+    </p>
+
+    <footer>© 2025 Skilet Cool</footer>
+    <script src=".//js/script.js"></script>
+  </body>
+</html>
